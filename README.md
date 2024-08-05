@@ -6,7 +6,13 @@ The single executable of Elasticdump.
 
 [Download](https://github.com/hoilc/elasticsearch-dump-standalone/releases/latest) 
 
+---
 
+```
+curl -O -fsSL https://github.com/hoilc/elasticsearch-dump-standalone/releases/latest/download/elasticdump_linux_amd64.tar.gz
+tar xvf elasticdump_linux_amd64.tar.gz
+./elasticdump --help
+```
 
 
 
