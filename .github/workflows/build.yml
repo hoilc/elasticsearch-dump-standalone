@@ -85,7 +85,7 @@ jobs:
           nexe --build -i bin/elasticdump -r "./node_modules/**/*" -r "./lib/**" -r elasticdump.js -r package.json --python /usr/bin/python3 --make="-j$(nproc 2> /dev/null || echo 1)"
           tar zcvf ../elasticdump_linux_amd64.tar.gz elasticdump
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: elasticdump_linux_amd64
           path: elasticdump_linux_amd64.tar.gz
@@ -97,7 +97,7 @@ jobs:
       contents: write
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: elasticdump_linux_amd64
       - name: Check latest tag
